@@ -14,7 +14,7 @@
 
 window.TESTI = {
   it: {
-    titolo_pagina: "La Bacheca dell'Avventuriero – Mini manuali gratuiti per D&D 5e",
+    titolo_pagina: "La Bacheca dell'Avventuriero – Mini manuali gratuiti per D&D 5 edizione",
     descrizione_pagina: "Mini manuali PDF gratuiti per Dungeons & Dragons quinta edizione: mostri, oggetti magici, sottoclassi, incantesimi e strumenti per il master.",
     salta: "Vai ai manuali",
     nome_sito: "La Bacheca dell'Avventuriero",
@@ -25,7 +25,7 @@ window.TESTI = {
     kofi_breve: "Sostienimi",
     lingua_gruppo: "Lingua del sito",
 
-    eroe_titolo: "Mini manuali gratuiti per le tue sessioni di D&D 5e",
+    eroe_titolo: "Mini manuali gratuiti per le tue sessioni di D&D 5 edizione",
     eroe_intro: "Mostri, oggetti magici, sottoclassi e aiuti per il master, raccolti in piccoli PDF pronti da stampare. E si, sono tutti gratis!",
     eroe_bottone: "Sfoglia i manuali",
 
@@ -87,13 +87,15 @@ window.TESTI = {
     faq_regole_r: "Ogni manuale indica la versione delle regole per cui è pensato. In generale si usano con entrambe con piccoli aggiustamenti.",
     faq_errore_d: "Ho trovato un errore in un manuale. Cosa faccio?",
     faq_errore_r: "Scrivimi a <a href=\"mailto:{email}\">{email}</a> indicando il nome del manuale e la pagina: lo correggo e carico la versione aggiornata.",
+    faq_immagini_d: "Bellissime le illustrazioni! Le hai fatte tu?",
+    faq_immagini_r: "Mi piacerebbe un sacco, ma purtroppo non sono un illustratore. Sono generate tramite AI open source.",
 
     piede_disclaimer: "Materiale non ufficiale creato da un fan. Non è approvato né sponsorizzato da Wizards of the Coast. Dungeons & Dragons e D&D sono marchi di Wizards of the Coast LLC.",
     piede_copyright: "© {anno} {autore}. Manuali rilasciati con licenza {licenza}. Fatto con pergamena, inchiostro e troppi d20."
   },
 
   en: {
-    titolo_pagina: "The Adventurer's Board – Free mini-manuals for D&D 5e",
+    titolo_pagina: "The Adventurer's Board – Free mini-manuals for D&D 5th edition",
     descrizione_pagina: "Free PDF mini-manuals for Dungeons & Dragons fifth edition: monsters, magic items, subclasses, spells and DM tools.",
     salta: "Skip to the manuals",
     nome_sito: "The Adventurer's Board",
@@ -104,7 +106,7 @@ window.TESTI = {
     kofi_breve: "Support me",
     lingua_gruppo: "Site language",
 
-    eroe_titolo: "Free mini‑manuals for your D&D 5e sessions",
+    eroe_titolo: "Free mini‑manuals for your D&D 5th edition sessions",
     eroe_intro: "Monsters, magic items, subclasses and DM aids, packed into small print-ready PDFs. And yes, they are all for free!",
     eroe_bottone: "Browse the manuals",
 
@@ -166,6 +168,8 @@ window.TESTI = {
     faq_regole_r: "Each manual says which version of the rules it's designed for. Most work with both with minor tweaks.",
     faq_errore_d: "I found a mistake in a manual. What should I do?",
     faq_errore_r: "Write to me at <a href=\"mailto:{email}\">{email}</a> with the manual's name and page: I'll fix it and upload the corrected version.",
+    faq_immagini_d: "The illustrations are beautiful! Did you draw them yourself?",
+    faq_immagini_r: "I'd love to, but unfortunately I'm not an illustrator. They're generated using open-source AI.",
 
     piede_disclaimer: "Unofficial fan content. Not approved or endorsed by Wizards of the Coast. Dungeons & Dragons and D&D are trademarks of Wizards of the Coast LLC.",
     piede_copyright: "© {anno} {autore}. Manuals released under the {licenza} license. Made with parchment, ink and too many d20s."

@@ -74,6 +74,24 @@ window.MATERIALI = [
       file: "pdf/en/Herbarium.pdf",
       stampa: "pdf/en/Herbarium_print.pdf"
     }
+  },
+
+   {
+    categoria: "incantesimi",
+    data: "2026-11-13",
+    regole: "2014",
+    it: {
+      titolo: "Grimorio - Il Libro delle Ore Spente",
+      descrizione: "Trentacinque incantesimi che chiunque sappia piegare la magia può leggere. E pagare.",
+      file: "pdf/it/Grimorio.pdf",
+      stampa: "pdf/it/Grimorio_print.pdf"
+    },
+    en: {
+      titolo: "Grimoire - The Book of Snuffed Hours",
+      descrizione: "Thirty-five spells that anyone who can bend magic may read. And pay for.",
+      file: "pdf/en/Grimoire.pdf",
+      stampa: "pdf/en/Grimoire_print.pdf"
+    }
   }
 ];
 

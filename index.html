@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Bacheca dell'Avventuriero – Mini manuali gratuiti per D&amp;D 5e</title>
+  <meta name="description" content="Mini manuali PDF gratuiti per D&amp;D 5e. Free PDF mini-manuals for D&amp;D 5e.">
+  <meta property="og:title" content="La Bacheca dell'Avventuriero / The Adventurer's Board">
+  <meta property="og:description" content="Mini manuali PDF gratuiti per D&amp;D 5e. Free PDF mini-manuals for D&amp;D 5e.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Alegreya:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--
+    I testi di questa pagina NON si modificano qui: sono in js/testi.js,
+    in italiano e in inglese. Le impostazioni (nome, Ko-fi, email, licenza)
+    sono in js/config.js. L'elenco dei manuali è in js/materiali.js.
+  -->
+  <a class="salta" href="#bottino" data-t="salta"></a>
+
+  <div class="cielo">
+    <header class="testata">
+      <a class="logo" href="#">
+        <svg class="logo-dado" viewBox="0 0 200 200" aria-hidden="true"><use href="#d20"/></svg>
+        <span data-t="nome_sito"></span>
+      </a>
+      <nav class="menu" data-t-attr="aria-label:nav_etichetta">
+        <a href="#bottino" data-t="nav_manuali"></a>
+        <a href="#chi-sono" data-t="nav_chi"></a>
+        <a href="#domande" data-t="nav_domande"></a>
+      </nav>
+      <div class="testata-azioni">
+        <a class="kofi-piccolo" data-se="kofi" data-link="kofi" target="_blank" rel="noopener">
+          <svg class="icona" viewBox="0 0 24 24" aria-hidden="true"><use href="#icona-tazza"/></svg>
+          <span data-t="kofi_breve"></span>
+        </a>
+        <div class="lingue" role="group" data-t-attr="aria-label:lingua_gruppo">
+          <button type="button" data-lingua="it" lang="it" aria-label="Italiano" title="Italiano">IT</button>
+          <button type="button" data-lingua="en" lang="en" aria-label="English" title="English">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="eroe">
+      <div class="eroe-testo">
+        <h1 data-t="eroe_titolo"></h1>
+        <p class="eroe-intro" data-t="eroe_intro"></p>
+        <a class="bottone bottone-oro" href="#bottino" data-t="eroe_bottone"></a>
+      </div>
+
+      <div class="eroe-dado">
+        <button class="dado" id="dado" type="button" aria-describedby="dado-esito">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <use href="#d20"/>
+            <text id="dado-numero" x="100" y="114" text-anchor="middle" dominant-baseline="middle">20</text>
+          </svg>
+          <span class="sr-only" data-t="dado_sr"></span>
+        </button>
+        <p class="dado-invito" id="dado-esito" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="bacheca-sezione" id="bottino" aria-labelledby="titolo-bottino">
+      <div class="bacheca-intestazione">
+        <h2 id="titolo-bottino" data-t="bottino_titolo"></h2>
+        <p data-t="bottino_intro"></p>
+      </div>
+
+      <div class="filtri">
+        <div class="filtri-categorie" id="filtri" role="group" data-t-attr="aria-label:filtri_gruppo"></div>
+        <label class="cerca">
+          <span class="sr-only" data-t="cerca_sr"></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+          <input type="search" id="cerca" autocomplete="off" data-t-attr="placeholder:cerca_placeholder">
+        </label>
+      </div>
+
+      <div class="bacheca">
+        <p class="conteggio" id="conteggio" aria-live="polite"></p>
+        <ul class="avvisi" id="avvisi"></ul>
+        <div class="vuoto" id="vuoto" hidden>
+          <p data-t-html="vuoto"></p>
+          <button class="bottone bottone-piccolo" type="button" id="azzera" data-t="mostra_tutto"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chi-sono" id="chi-sono" aria-labelledby="titolo-chi">
+      <div class="ritratto" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="56" class="ritratto-sfondo"/>
+          <path class="ritratto-cappello" d="M22 62 C 40 56, 80 56, 98 62 L 84 58 L 66 8 L 52 30 L 36 58 Z"/>
+          <circle cx="66" cy="8" r="4" class="ritratto-stella"/>
+          <circle cx="48" cy="74" r="4" class="ritratto-occhio"/>
+          <circle cx="72" cy="74" r="4" class="ritratto-occhio"/>
+          <path d="M48 90 Q 60 99 72 90" class="ritratto-bocca"/>
+        </svg>
+      </div>
+      <div>
+        <h2 id="titolo-chi" data-t="chi_titolo"></h2>
+        <p data-t-html="chi_testo"></p>
+        <p data-se="email" data-t-html="chi_email"></p>
+
+        <div class="sostieni" id="sostieni" data-se="kofi">
+          <svg class="sostieni-tazza" viewBox="0 0 24 24" aria-hidden="true"><use href="#icona-tazza"/></svg>
+          <div>
+            <h3 data-t="sostieni_titolo"></h3>
+            <p data-t="sostieni_testo"></p>
+            <a class="bottone bottone-oro" data-link="kofi" target="_blank" rel="noopener">
+              <svg class="icona" viewBox="0 0 24 24" aria-hidden="true"><use href="#icona-tazza"/></svg>
+              <span data-t="sostieni_bottone"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="domande" id="domande" aria-labelledby="titolo-domande">
+      <h2 id="titolo-domande" data-t="faq_titolo"></h2>
+      <details>
+        <summary data-t="faq_gratis_d"></summary>
+        <p data-t-html="faq_gratis_r"></p>
+      </details>
+      <details>
+        <summary data-t="faq_licenza_d"></summary>
+        <p data-t-html="faq_licenza_r"></p>
+      </details>
+      <details>
+        <summary data-t="faq_stampa_d"></summary>
+        <p data-t-html="faq_stampa_r"></p>
+      </details>
+      <details>
+        <summary data-t="faq_lingua_d"></summary>
+        <p data-t-html="faq_lingua_r"></p>
+      </details>
+      <details>
+        <summary data-t="faq_regole_d"></summary>
+        <p data-t-html="faq_regole_r"></p>
+      </details>
+      <details data-se="email">
+        <summary data-t="faq_errore_d"></summary>
+        <p data-t-html="faq_errore_r"></p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="piede">
+    <p data-t="piede_disclaimer"></p>
+    <p data-t-html="piede_copyright"></p>
+  </footer>
+
+  <!-- Simboli SVG riutilizzabili -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="d20" viewBox="0 0 200 200">
+        <polygon class="d20-corpo" points="100,8 180,54 180,146 100,192 20,146 20,54"/>
+        <polygon class="d20-faccia" points="100,46 148,130 52,130"/>
+        <g class="d20-spigoli">
+          <polyline points="100,8 100,46"/>
+          <polyline points="20,54 100,46 180,54"/>
+          <polyline points="20,54 52,130 20,146"/>
+          <polyline points="180,54 148,130 180,146"/>
+          <polyline points="52,130 100,192 148,130"/>
+        </g>
+      </symbol>
+      <symbol id="icona-tazza" viewBox="0 0 24 24">
+        <path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/>
+        <path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/>
+        <path d="M8 3.5c0 1 1 1.5 1 2.5M12 3.5c0 1 1 1.5 1 2.5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/config.js"></script>
+  <script src="js/testi.js"></script>
+  <script src="js/materiali.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

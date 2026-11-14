@@ -39,7 +39,7 @@ window.TESTI = {
     dado_vuoto: "Hai fatto {n}, ma la bacheca è ancora vuota.",
 
     bottino_titolo: "La bacheca del bottino",
-    bottino_intro: "Scegli una categoria o cerca per nome. Clicca su “Scarica PDF” e il manuale è tuo.",
+    bottino_intro: "Scegli una categoria o cerca per nome. Clicca su “Scarica PDF” e il manuale è tuo. Tutti i manuali sono in formato a5",
     filtri_gruppo: "Filtra per categoria",
     tutti: "Tutti",
     cerca_sr: "Cerca un manuale",
@@ -120,7 +120,7 @@ window.TESTI = {
     dado_vuoto: "You rolled {n}, but the board is still empty.",
 
     bottino_titolo: "The loot board",
-    bottino_intro: "Pick a category or search by name. Click “Download PDF” and the manual is yours.",
+    bottino_intro: "Pick a category or search by name. Click “Download PDF” and the manual is yours. All the manuals are in a5 format.",
     filtri_gruppo: "Filter by category",
     tutti: "All",
     cerca_sr: "Search for a manual",

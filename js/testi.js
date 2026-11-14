@@ -39,7 +39,7 @@ window.TESTI = {
     dado_vuoto: "Hai fatto {n}, ma la bacheca è ancora vuota.",
 
     bottino_titolo: "La bacheca del bottino",
-    bottino_intro: "Scegli una categoria o cerca per nome. Clicca su “Scarica PDF” e il manuale è tuo. Tutti i manuali sono in formato a5",
+    bottino_intro: "Scegli una categoria o cerca per nome. Clicca su “Scarica PDF” e il manuale è tuo. Tutti i manuali sono in formato a5.",
     filtri_gruppo: "Filtra per categoria",
     tutti: "Tutti",
     cerca_sr: "Cerca un manuale",

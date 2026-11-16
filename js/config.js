@@ -7,7 +7,7 @@ window.CONFIG = {
   autore: "neuromancer",
 
   // Il link alla tua pagina Ko-fi. Lascia "" per nascondere i pulsanti.
-  kofi: "https://ko-fi.com/neuromancer89",
+  kofi: "https://ko-fi.com/IL-TUO-NOME-KOFI",
 
   // La tua email per le segnalazioni. Lascia "" per non mostrarla.
   email: "",

@@ -169,6 +169,14 @@
     return c[lingua] || c.it || c.nome || k;
   }
 
+  // le categorie di un manuale, sempre come lista.
+  // Accetta sia categoria: "mostri" sia categorie: ["mostri", "oggetti"]
+  function categorieDi(m) {
+    var c = m.categorie || m.categoria || [];
+    if (!Array.isArray(c)) c = [c];
+    return c.filter(function (k, i) { return k && c.indexOf(k) === i; });
+  }
+
   // la versione di un manuale in una lingua, solo se ha un PDF
   function versione(m, l) { return m[l] && m[l].file ? m[l] : null; }
 
@@ -191,7 +199,9 @@
 
   function disegnaFiltri() {
     var conteggi = {};
-    materiali.forEach(function (m) { conteggi[m.categoria] = (conteggi[m.categoria] || 0) + 1; });
+    materiali.forEach(function (m) {
+      categorieDi(m).forEach(function (k) { conteggi[k] = (conteggi[k] || 0) + 1; });
+    });
 
     var html = '<button type="button" class="filtro" data-cat="tutti">' + esc(tPiano("tutti")) +
       ' <span class="filtro-n">' + materiali.length + "</span></button>";
@@ -216,7 +226,10 @@
   var frecciaGiu ='<svg class="icona" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 
   function avvisoHTML(m) {
-    var cat = categorie[m.categoria] || { icona: "dado" };
+    var etichetteCat = categorieDi(m).map(function (k) {
+      var c = categorie[k] || { icona: "dado" };
+      return "<li>" + icona(c.icona) + esc(nomeCategoria(k)) + "</li>";
+    }).join("");
     var tx = testo(m);
     var qui = versione(m, lingua);
     var altra = versione(m, altraLingua());
@@ -250,7 +263,7 @@
       '<span class="puntina" aria-hidden="true"></span>' +
       (eNuovo(m) ? '<span class="sigillo" title="' + esc(tPiano("nuovo_suggerimento")) + '">' + esc(tPiano("nuovo")) + "</span>" : "") +
       (m.copertina ? '<img class="avviso-copertina" src="' + esc(m.copertina) + '" alt="" loading="lazy">' : "") +
-      '<p class="avviso-categoria">' + icona(cat.icona) + esc(nomeCategoria(m.categoria)) + "</p>" +
+      (etichetteCat ? '<ul class="avviso-categorie" aria-label="' + esc(tPiano("categorie_etichetta")) + '">' + etichetteCat + "</ul>" : "") +
       "<h3>" + esc(tx.titolo) + "</h3>" +
       '<p class="avviso-descrizione">' + esc(tx.descrizione) + "</p>" +
       (dati.length ? '<dl class="avviso-dati">' + dati.map(function (d) {
@@ -273,9 +286,14 @@
   function filtrati() {
     var q = normalizza(stato.testo.trim());
     return materiali.filter(function (m) {
-      if (stato.categoria !== "tutti" && m.categoria !== stato.categoria) return false;
+      var cats = categorieDi(m);
+      if (stato.categoria !== "tutti" && cats.indexOf(stato.categoria) === -1) return false;
       if (!q) return true;
-      var tutto = [nomeCategoria(m.categoria)];
+      var tutto = [];
+      cats.forEach(function (k) {
+        var c = categorie[k] || {};
+        tutto.push(k, c.it || "", c.en || "");
+      });
       LINGUE.forEach(function (l) { if (m[l]) tutto.push(m[l].titolo, m[l].descrizione); });
       return normalizza(tutto.join(" ")).indexOf(q) !== -1;
     });

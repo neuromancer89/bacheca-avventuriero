@@ -449,14 +449,21 @@ a:hover { color: var(--pergamena); }
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 
-.avviso-categoria {
+.avviso-categorie {
   display: flex;
-  align-items: center;
-  gap: 0.4em;
-  margin: 0 0 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  margin: 0 2.6rem 0.4rem 0;   /* spazio a destra per il sigillo "Nuovo" */
+  padding: 0;
+  list-style: none;
   color: var(--ceralacca);
   font-weight: 800;
   font-size: 0.95rem;
+}
+.avviso-categorie li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
 }
 
 .avviso h3 {

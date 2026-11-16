@@ -9,11 +9,15 @@
       alla lista MATERIALI.
    3. Compila i campi:
 
-      categoria   Una delle chiavi di CATEGORIE (in fondo al file)
+      categorie   Una o più chiavi di CATEGORIE (in fondo al file), tra
+                  parentesi quadre e separate da virgole:
+                    categorie: ["mostri"]
+                    categorie: ["classi", "incantesimi"]
+                  Il manuale compare sotto ognuna delle categorie indicate.
       data        Data di pubblicazione, "AAAA-MM-GG"
       pagine      Numero di pagine (facoltativo)
       livelli     Livelli consigliati, es. "1–5" (facoltativo)
-      regole      "2014", "2024" o "2014/2024" (facoltativo)
+      regole      Versione delle regole, es. "2014" (facoltativo)
       copertina   Immagine, es. "img/copertine/drago.jpg" (facoltativo)
 
       it: { ... }  La versione italiana
@@ -32,34 +36,11 @@
       capirà di cosa parla e vedrà "Available in Italian only".
 
    4. Salva e carica le modifiche su GitHub.
-
-
-   {
-    categoria: "mostri",
-    data: "2026-11-02",
-    pagine: 16,
-    livelli: "1–8",
-    regole: "2024",
-    it: {
-      titolo: "Bestiario delle Cantine",
-      descrizione: "Otto creature da incontrare tra botti e ragnatele, dal Topo Sommelier alla Muffa Senziente.",
-      file: "pdf/it/bestiario-cantine.pdf",
-      stampa: "pdf/it/bestiario-cantine-stampa.pdf",
-      mb: 5.4
-    },
-    en: {
-      titolo: "The Cellar Bestiary",
-      descrizione: "Eight creatures lurking among barrels and cobwebs, from the Sommelier Rat to the Sentient Mould.",
-      file: "pdf/en/cellar-bestiary.pdf",
-      stampa: "pdf/en/cellar-bestiary-print.pdf",
-      mb: 5.3
-    }
-  },
-   ========================================================================== */
+      ========================================================================== */
 
 window.MATERIALI = [
   {
-    categoria: "oggetti",
+    categoria: ["oggetti"],
     data: "2026-11-13",
     regole: "2014/2024",
     it: {
@@ -77,7 +58,7 @@ window.MATERIALI = [
   },
 
    {
-    categoria: "incantesimi",
+    categoria: ["incantesimi", "oggetti"],
     data: "2026-11-13",
     regole: "2014",
     it: {

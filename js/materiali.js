@@ -73,6 +73,24 @@ window.MATERIALI = [
       file: "pdf/en/Grimoire.pdf",
       stampa: "pdf/en/Grimoire_print.pdf"
     }
+  },
+
+  {
+    categoria: ["classi", "oggetti"],
+    data: "2026-11-20",
+    regole: "2014",
+    it: {
+      titolo: "Il Libro dell'Alchimista",
+      descrizione: "Quaranta formule di pozioni, elisir e reagenti per l'Artefice.",
+      file: "pdf/it/Libro_Alchimista.pdf",
+      stampa: "pdf/it/Libro_Alchimista_print.pdf"
+    },
+    en: {
+      titolo: "The Alchemist's Book",
+      descrizione: "Forty formulas for potions, elixirs and reagents for the Artificer.",
+      file: "pdf/en/Alchemist_Book.pdf",
+      stampa: "pdf/en/Alchemist_Book_print.pdf"
+    }
   }
 ];
 
